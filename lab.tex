@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{multirow}
+\usepackage{graphicx}
 
 \begin{document}
     \section{Подготовка к работе}
@@ -67,7 +68,7 @@
     \section{Результаты измерений}
     Определим основные максимумы и минимумы КСВН для пустого волновода,
     волновода с ячменёи и с пшеницей:
-    \begin{table}
+    \begin{table}[h]
         \center
         \begin{tabular}{|C{.1}|C{.1}||C{.1}|C{.1}||C{.1}|C{.1}|}
             \hline
@@ -96,4 +97,17 @@
                  &    & 52.3 & 1.76 &      &      \\ \hline
         \end{tabular}
     \end{table}
+
+    \begin{figure}[h]
+        \center
+        \includegraphics[width=.9\textwidth]{plot1}
+        \caption{Зависимость КСВ от частоты}
+    \end{figure}
+
+    \begin{figure}[h]
+        \center
+        \includegraphics[width=.9\textwidth]{plot2}
+        \caption{Зависимость КСВ от частоты}
+    \end{figure}
+
 \end{document}
