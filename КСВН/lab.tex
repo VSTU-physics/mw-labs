@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{hedwork}
 \usepackage[column]{hedfeatures}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 
 \begin{document}
+    \setcounter{page}{2}
+    \tableofcontents
     \section{Подготовка к работе}
         \begin{enumerate}
             \item На задней панели индикатора установите ось резистора
@@ -42,7 +44,15 @@
                 а калибровку можно начать через 15 минут после включения.
         \end{enumerate}
     \section{Калибровка}
-
+        Для калибровки необходимо собрать установку согласно схеме, представленной на рисунке~\ref{cal}.
+        
+        \begin{figure}[h!]
+            \center
+            \includegraphics[width=.6\textwidth]{1}
+            \caption{Схема установки при проведении калибровки}
+            \label{cal}
+        \end{figure}
+        
         \begin{enumerate}
             \item При помощи ручек НАЧАЛЬНАЯ ЧАСТОТА и КОНЕЧНАЯ ЧАСТОТА
                 установите полный диапазон качания частоты;
@@ -65,11 +75,20 @@
                 отсчёт по верхней шкале dB по формуле:
         \end{enumerate}
     \section{Проведение измерений}
+    Для проведения измерений переориентируем второй ответвитель согласно схеме, представленной на рисунке~\ref{mea}.
+    \begin{figure}[h!]
+        \center
+        \includegraphics[width=.6\textwidth]{2}
+        \caption{Схема установки при проведении измерений}
+        \label{mea}
+    \end{figure}
     \section{Результаты измерений}
     Определим основные максимумы и минимумы КСВН для пустого волновода,
-    волновода с ячменёи и с пшеницей:
-    \begin{table}[h]
+    волновода с ячменём и с пшеницей. Полученные данные представлены в таблице~\ref{data}.
+    \begin{table}[h!]
         \center
+        \caption{Экспериментальные данные}
+        \label{data}
         \begin{tabular}{|C{.1}|C{.1}||C{.1}|C{.1}||C{.1}|C{.1}|}
             \hline
             \multicolumn{2}{|c||}{Пустой} &
@@ -98,16 +117,16 @@
         \end{tabular}
     \end{table}
 
-    \begin{figure}[h]
+    \begin{figure}[H!]
         \center
         \includegraphics[width=.9\textwidth]{plot1}
         \caption{Зависимость КСВ от частоты}
     \end{figure}
 
-    \begin{figure}[h]
+    \begin{figure}[H!]
         \center
         \includegraphics[width=.9\textwidth]{plot2}
-        \caption{Зависимость КСВ от частоты}
+        \caption{Минимумы и максимумы зависимости КСВ от частоты}
     \end{figure}
 
 \end{document}
