@@ -2,6 +2,7 @@
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1cm,left=2cm]{geometry} % сделать по ГОСТУ
+\usepackage{tikz}
 \begin{document}
 	% не забыть вставить титульник
 	\section*{Введение}
@@ -25,6 +26,63 @@
 	
 	\subsection{Описание приборов}
 	\subsubsection{Блок питания клистрона}
+	\begin{tikzpicture}[
+  scale=.1,
+  controlpanels/.style={yellow!30!brown!20!,rounded corners,draw=black,thick},
+  screen/.style={green!50!black!60!,draw=black,thick},
+  trace/.style={green!60!yellow!40!, ultra thick},
+  smallbutton/.style={white,draw=black, thick},
+  axes/.style={thick}]
+  	% контур
+	\draw[rounded corners,draw=black,thick](0,0)
+    rectangle (100,100);
+    % клеммы
+    \draw[draw=black,thick](30,90) circle (4);
+    \draw[draw=black,thick](30,90) circle (2);
+    \draw[draw=black,thick](40,90) circle (4);
+    \draw[draw=black,thick](40,90) circle (2);
+    \draw[draw=black,thick](50,90) circle (4);
+    \draw[draw=black,thick](50,90) circle (2);
+    \draw[draw=black,thick](60,90) circle (4);
+    \draw[draw=black,thick](60,90) circle (2);
+    \draw[draw=black,thick](70,90) circle (4);
+    \draw[draw=black,thick](70,90) circle (2);
+    \draw[draw=black,thick](80,80) circle (3);
+    \draw[draw=black,thick](80,80) circle (1.5);
+    \draw[draw=black,thick](90,80) circle (3);
+    \draw[draw=black,thick](90,80) circle (1.5);
+    % тумблеры
+    % переключение вольтметра
+    \draw[black,thick](50, 70) circle (3);
+    \draw[black,thick](50, 70) circle (2);
+    \fill[fill=white,rounded corners,draw=black,thick](49,69)
+    rectangle (56,71);
+    % включение напряжений + индикаторы
+    \draw[black,thick](80, 50) circle (3);
+    \draw[black,thick](90, 50) circle (3);
+    \draw[black,thick](90, 50) circle (2);
+    \fill[fill=white,rounded corners,draw=black,thick](89,51)
+    rectangle (91,44);
+
+    \draw[black,thick](80, 35) circle (3);
+    \draw[black,thick](90, 35) circle (3);
+    \draw[black,thick](90, 35) circle (2);
+    \fill[fill=white,rounded corners,draw=black,thick](89,36)
+    rectangle (91,29);
+
+    \draw[black,thick](80, 20) circle (3);
+    \draw[black,thick](90, 20) circle (3);
+    \draw[black,thick](90, 20) circle (2);
+    \fill[fill=white,rounded corners,draw=black,thick](89,21)
+    rectangle (91,14);
+    % основной тумблер
+    \draw[black,thick](20, 10) rectangle (25,20);
+    \draw[black](20, 15) -- (25,15);
+
+    % вольтметр
+    \draw[rounded corners,draw=black,thick](30,10)
+    rectangle (70,60);
+	\end{tikzpicture}
 	\subsubsection{Измеритель мощности}
 	\subsubsection{Анализатор спектра}
 
