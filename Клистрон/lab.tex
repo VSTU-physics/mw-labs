@@ -6,7 +6,6 @@
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{setspace}
 \usepackage{multirow}
 \usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
@@ -47,6 +46,7 @@
 \titlespacing*{\subsubsection}{\parindent}{*4}{*1}
 
 \renewcommand{\tan}{\mathrm{tg\,}}
+\renewcommand{\baselinestretch}{1.5}
 \begin{document}
 	\begin{titlepage}
         \begin{center}
@@ -82,7 +82,6 @@
         \end{center}
     \end{titlepage}
     \setcounter{page}{2}
-    \onehalfspacing
 	\section*{Введение}
 	В данной работе определяются характеристики отражательного клистрона К-97Р: его рабочая частота и добротность резонатора. Все измерения проводятся в "горячем" режиме.
 	
@@ -121,7 +120,7 @@
 	
 	Отсюда следует формула для расчёта зон генерации:
 	\begin{equation}
-	n \approx \frac{mlv_0}{\pi e(U_0 + |U_r|)} - \frac{3}{4} \approx \sqrt{\frac{2m}{e}}\frac{l\sqrt{U_0}}{\pi (U_0 + |U_r|)} - \frac{3}{4}.
+	n \approx \frac{\omega mlv_0}{\pi e(U_0 + |U_r|)} - \frac{3}{4} \approx \sqrt{\frac{2m}{e}}\frac{\omega l\sqrt{U_0}}{\pi (U_0 + |U_r|)} - \frac{3}{4}.
     \label{eq:n}
 	\end{equation}
 	
@@ -130,7 +129,7 @@
 	f = f_0 \left(1 - \frac{1}{2Q} \tan \left( \frac{2\pi(n + 3/4)}{U_0 + |U_r|} \delta U_r \right)\right), \label{eq:Q}\\
 	P = I_0 U_0 \frac{\cos (2\pi (n + 3/4)\delta U_r/(U_0 + |U_r|)}{\pi (n + 3/4)} X J_1(X),
 	\end{gather}
-	где $f_0$ -- частота соответствующая центру зоны генерации, $Q$ -- добротность резонатора, $\delta U_r$ -- перестройка напряжения от центра зоны генерации, $I_0$ -- ток резонатора, $J_1(X)$ -- функция Бесселя первого порядка, $X = U_m\beta/2U_0$ -- параметр модуляции. Отсюда следует, что для определения добротности резонатора необходимо определить перестройку частоты в малом диапазоне напряжений отражателя в окрестности центра зоны генерации.
+	где $f_0 = \omega/2\pi$ -- частота соответствующая центру зоны генерации, $Q$ -- добротность резонатора, $\delta U_r$ -- перестройка напряжения от центра зоны генерации, $I_0$ -- ток резонатора, $J_1(X)$ -- функция Бесселя первого порядка, $X = U_m\beta/2U_0$ -- параметр модуляции. Отсюда следует, что для определения добротности резонатора необходимо определить перестройку частоты в малом диапазоне напряжений отражателя в окрестности центра зоны генерации.
 	
 	\section{Методика проведения измерений}
 	\subsection{Описание установки}
