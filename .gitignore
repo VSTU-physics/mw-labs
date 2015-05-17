@@ -5,5 +5,5 @@
 *.pdf
 *.gz
 *.aux
-*.gz(busy)
 *.out
+*.gz(busy)
