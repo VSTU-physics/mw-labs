@@ -152,7 +152,7 @@
                 \draw ({0.7 + 0.1 + 0.5*(1 + sqrt(3)/2)}, 0) circle (0.1);
                 % выход
                 \draw ({0.7 + 0.2 + 0.5*(1 + sqrt(3)/2)}, 0) -- (3, 0);
-                \draw (2.5 , -0.3) rectangle (2.8, 0.3);
+                \draw (2.4 , -0.3) rectangle (2.7, 0.3);
                 % нагреватель
                 \draw (-0.4, -2.5) -- (-0.4, -1.5);
                 \draw (0.4, -2.5) -- (0.4, -1.5);
@@ -178,9 +178,26 @@
             \end{scope}
             \draw (3,0) -- (3.5, 0);
 
+            % переход на коаксиал
+            \draw (3, -0.6) -- (3, 0.6);
+            \draw (2.7, 0.6) -- (3.3, 0.6);
+            \draw (2.7, 0) -- (4.5,0);
+            \draw (3.6,0) circle (0.3cm);
+            \draw (3.3,-0.3) -- (3.9,-0.3);
+
+            % как обозначить анализатор?
+            \draw (4.5, -0.5) rectangle (4.5 + 1, 0.5);
+            \node at (5, 0) {$\alpha$};
+
+            \draw (7, -0.6) -- (7, 0.6);
+            \draw (6.7, 0.6) -- (7.3, 0.6);
+            \draw (5.5, 0) -- (8.5,0);
+            \draw (6.4,0) circle (0.3cm);
+            \draw (6.1,-0.3) -- (6.7,-0.3);
+            \draw (7.3 , -0.3) rectangle (7.6, 0.3);
             % ваттметр
-            \draw (4, 0) circle (.5);
-            \node at (4, 0) {$\mathrm{W}$};
+            \draw (9, 0) circle (.5);
+            \node at (9, 0) {$\mathrm{W}$};
         \end{tikzpicture}
         \caption{Функциональная схема установки для определения частоты клистрона.}
         \label{sch1}
@@ -205,7 +222,7 @@
                 \draw ({0.7 + 0.1 + 0.5*(1 + sqrt(3)/2)}, 0) circle (0.1);
                 % выход
                 \draw ({0.7 + 0.2 + 0.5*(1 + sqrt(3)/2)}, 0) -- (3, 0);
-                \draw (2.5 , -0.3) rectangle (2.8, 0.3);
+                \draw (2.4 , -0.3) rectangle (2.7, 0.3);
                 % нагреватель
                 \draw (-0.4, -2.5) -- (-0.4, -1.5);
                 \draw (0.4, -2.5) -- (0.4, -1.5);
@@ -239,7 +256,10 @@
 
             % как обозначить анализатор?
             \draw (4.5, -0.5) rectangle (4.5 + 1, 0.5);
-            \node at (5, 0) {$\mathrm{S}$};
+            \node at (5, 0) {$\alpha$};
+            \draw (5.5, 0) -- (6.5,0);
+            \draw (6.5, -0.5) rectangle (6.5 + 1, 0.5);
+            \node at (7, 0) {$\mathrm{S}$};
 
         \end{tikzpicture}
         \caption{Функциональная схема установки для определения частоты клистрона.}
@@ -495,8 +515,7 @@
 				\multirow{2}*{$U_0,~\text{В}$} & \multicolumn{3}{|c|}{$|U_r|,~\text{В}$} & \multirow{2}*{n} \\ \cline{2-4}
 				& минимум & центр & максимум & \\
 				\hline
-				\multirow{3}*{} &  &  & &  \\ \hline
-				&  &  &  & \\ \hline
+				\multirow{2}*{} &  &  & &  \\ \hline
 				&  &  &  & \\ \hline
 			\end{tabular}
 		\end{table}
@@ -506,18 +525,16 @@
 		\item Изменяя напряжение на отражателе снимите зависимость частоты от напряжения отражателя. Занесите данные в таблицу \ref{freqs1}
 		\begin{table}[h]
 			\center
-			\caption{Определение электронной перестройки}
+			\caption{Определение основной частоты и добротности}
 			\label{freqs1}
 			\begin{tabular}{|c|c|c|c|c|}\hline
 				$U_0,~\text{В}$ & $|U_r|,~\text{В}$ & $f,~\text{ГГц}$ & $f_0,~\text{ГГц}$ & $Q$ \\ \hline
 				\multirow{7}*{}
 				&& &
-				\multirow{7}*{}&\multirow{7}*{}\\ \hline
-				&& &&\\ \hline
-				&& &&\\ \hline
-				&& &&\\ \hline
-				&& &&\\ \hline
-				&& &&\\ \hline
+				\multirow{7}*{}&\multirow{7}*{}\\ \cline{1-3}
+				&& &&\\ \cline{1-3}
+				&& &&\\ \cline{1-3}
+				&& &&\\ \cline{1-3}
 				&& &&\\ \hline
 			\end{tabular}
 		\end{table}
@@ -550,7 +567,7 @@
 
     \begin{table}[h]
         \center
-        \caption{Определение электронной перестройки}
+        \caption{Определение основной частоты и добротности}
         \label{freqs}
         \begin{tabular}{|c|c|c|c|c|}\hline
             $U_0,~\text{В}$ & $|U_r|,~\text{В}$ & $f,~\text{ГГц}$ & $f_0,~\text{ГГц}$ & $Q$ \\ \hline
