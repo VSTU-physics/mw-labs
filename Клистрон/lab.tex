@@ -2,7 +2,7 @@
 \usepackage[russian]{babel}
 \usepackage[colorlinks=False]{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1cm,left=2cm]{geometry} % сделать по ГОСТУ
+\usepackage[margin=1.5cm,left=2cm,right=1cm]{geometry} % сделать по ГОСТУ
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{setspace}
@@ -16,9 +16,70 @@
 \usepackage{circuitikz}
 \ctikzset{bipoles/length=.8cm}
 
+
+\renewcommand{\small}{\fontsize{12pt}{14.4pt}\selectfont}
+\usepackage{caption}
+\DeclareCaptionLabelFormat{figure}{Рисунок #2}
+\DeclareCaptionLabelFormat{table}{Таблица #2}
+\DeclareCaptionLabelSeparator{sep}{~---~}
+\captionsetup{labelsep=sep,justification=centering,font=small}
+\captionsetup[figure]{labelformat=figure}
+\captionsetup[table]{labelformat=table}
+
+\usepackage{titlesec}
+\titleformat{\section}
+    {\centering\normalsize}
+    {\thesection}
+    {1em}{}
+\titleformat{\subsection}
+    {\centering\normalsize}
+    {\thesubsection}
+    {1em}{}
+\titleformat{\subsubsection}
+    {\centering\normalsize}
+    {\thesubsubsection}
+    {1em}{}
+
+\titlespacing*{\section}{\parindent}{*4}{*1}
+\titlespacing*{\subsection}{\parindent}{*4}{*1}
+\titlespacing*{\subsubsection}{\parindent}{*4}{*1}
+
 \renewcommand{\tan}{\mathrm{tg\,}}
 \begin{document}
-	% не забыть вставить титульник
+	\begin{titlepage}
+        \begin{center}
+          Министерство образования и науки Российской Федерации \\
+          Федеральное государственное бюджетное образовательное \\
+          учреждение высшего профессионального образования \\
+          <<Волгоградский государственный технический университет>> \\
+          Факультет электроники и вычислительной техники\\
+          Кафедра <<Физика>>
+        \end{center}
+        \vspace{9em}
+        \begin{center}
+          \large
+            Методические указания к лабораторной работе\\
+            <<Исследование характеристик клистрона К-97>>
+        \end{center}
+        \vspace{5em}
+        \begin{flushright}
+          \begin{minipage}{.40\textwidth}
+            Выполнили:\\
+            студенты группы Ф-1н\\
+            Абдрахманов В. Л.\\
+            Аликов С. А.\\
+            \vspace{1em}\\
+            Проверил:\\
+            д.ф.-м.н., профессор\\
+            Шеин А. Г.
+          \end{minipage}
+        \end{flushright}
+        \vspace{\fill}
+        \begin{center}
+          Волгоград, \the\year
+        \end{center}
+    \end{titlepage}
+    \setcounter{page}{2}
     \onehalfspacing
 	\section*{Введение}
 	В данной работе определяются характеристики отражательного клистрона К-97Р: его рабочая частота и добротность резонатора. Все измерения проводятся в "горячем" режиме.
