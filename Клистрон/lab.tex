@@ -2,6 +2,7 @@
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1cm,left=2cm]{geometry} % сделать по ГОСТУ
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{circuits.ee.IEC}
 \begin{document}
@@ -88,19 +89,25 @@
     \draw[black,thick](90, 50) circle (3);
     \draw[black,thick](90, 50) circle (2);
     \fill[fill=white,rounded corners,draw=black,thick](89,51)
-    rectangle (91,44);
+    rectangle (91,46);
+    \node[scale=1] at (90,43) {$6.3$};
+
 
     \draw[black,thick](80, 35) circle (3);
     \draw[black,thick](90, 35) circle (3);
     \draw[black,thick](90, 35) circle (2);
     \fill[fill=white,rounded corners,draw=black,thick](89,36)
-    rectangle (91,29);
+    rectangle (91,31);
+    \node[scale=1] at (90,28) {$-190$};
+
 
     \draw[black,thick](80, 20) circle (3);
     \draw[black,thick](90, 20) circle (3);
     \draw[black,thick](90, 20) circle (2);
     \fill[fill=white,rounded corners,draw=black,thick](89,21)
-    rectangle (91,14);
+    rectangle (91,16);
+    \node[scale=1] at (90,13) {$-350$};
+
     % основной тумблер
     \draw[black,thick](20, 10) rectangle (25,20);
     \draw[black](20, 15) -- (25,15);
@@ -111,7 +118,7 @@
     \draw[draw=black,thick](20,80) circle (5);
 
     % потенциометр резонатора
-    \fill[fill=white,rounded corners,draw=black,thick](100,79)
+    \draw[thick](100,79)
     rectangle (106,81);
 
 
