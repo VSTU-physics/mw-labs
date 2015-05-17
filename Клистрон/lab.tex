@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1cm,left=2cm]{geometry} % сделать по ГОСТУ
 \usepackage{tikz}
+\usetikzlibrary{circuits.ee.IEC}
 \begin{document}
 	% не забыть вставить титульник
 	\section*{Введение}
@@ -27,12 +28,8 @@
 	\subsection{Описание приборов}
 	\subsubsection{Блок питания клистрона}
 	\begin{tikzpicture}[
-  scale=.1,
-  controlpanels/.style={yellow!30!brown!20!,rounded corners,draw=black,thick},
-  screen/.style={green!50!black!60!,draw=black,thick},
-  trace/.style={green!60!yellow!40!, ultra thick},
-  smallbutton/.style={white,draw=black, thick},
-  axes/.style={thick}]
+  scale=.08 ,
+  circuit ee IEC]
   	% контур
 	\draw[rounded corners,draw=black,thick](0,0)
     rectangle (100,100);
@@ -53,10 +50,10 @@
     \draw[draw=black,thick](90,80) circle (1.5);
     % тумблеры
     % переключение вольтметра
-    \draw[black,thick](50, 70) circle (3);
-    \draw[black,thick](50, 70) circle (2);
-    \fill[fill=white,rounded corners,draw=black,thick](49,69)
-    rectangle (56,71);
+    \draw[black,thick](50, 78) circle (3);
+    \draw[black,thick](50, 78) circle (2);
+    \fill[fill=white,rounded corners,draw=black,thick](49,77)
+    rectangle (56,79);
     % включение напряжений + индикаторы
     \draw[black,thick](80, 50) circle (3);
     \draw[black,thick](90, 50) circle (3);
@@ -78,10 +75,45 @@
     % основной тумблер
     \draw[black,thick](20, 10) rectangle (25,20);
     \draw[black](20, 15) -- (25,15);
+    \node[scale=1] at (22.5,12.5) {$0$};
+    \node[scale=1] at (22.5,17.5) {$1$};
+
+    % потенциометр отражателя
+    \draw[draw=black,thick](20,80) circle (5);
+
+    % потенциометр резонатора
+    \fill[fill=white,rounded corners,draw=black,thick](100,79)
+    rectangle (106,81);
+
 
     % вольтметр
-    \draw[rounded corners,draw=black,thick](30,10)
-    rectangle (70,60);
+    \draw[rounded corners,draw=black,thick](30,10) rectangle (70,60);
+    \draw[draw=black,thick](32,22) rectangle (68,58);
+    \begin{scope}[xshift=50cm,yshift=16cm,scale=25]
+        \foreach \i in {60,63,...,120} \draw (\i:1.15)--(\i:1.20);
+        \foreach \i in {60,75,...,120} \draw[thick] (\i:1.15)--(\i:1.25);
+        \node[scale=.7] at (60:1.05) {$400$};
+        \node[scale=.7] at (75:1.35) {$300$};
+        \node[scale=.7] at (90:1.35) {$200$};
+        \node[scale=.7] at (105:1.35) {$100$};
+        \node[scale=.7] at (120:1.05) {$0$};
+        \draw[very thick] (95:0.25) -- (95:1);
+        \draw (95:1) -- (95:1.20);
+        \node[scale=1.5] at (90:0.7) {$\mathrm{V}$};
+    \end{scope}
+
+    % подписи
+    % клеммы
+    \node[scale=1.25] at (30,83) {$-$};
+    \node[scale=1.25] at (40,83) {$+$};
+    \node[scale=1.25] at (35,78) {$190$};
+
+    \draw (50,84.5) to (50, 83) node[ground,rotate=-90,xshift=3.9ex,scale=6] {};
+
+    \node[scale=1.25] at (60,83) {$-$};
+    \node[scale=1.25] at (70,83) {$+$};
+    \node[scale=1.25] at (65,78) {$350$};
+    \node[scale=1] at (84,75) {$\sim 6.3$};
 	\end{tikzpicture}
 	\subsubsection{Измеритель мощности}
 	\subsubsection{Анализатор спектра}
