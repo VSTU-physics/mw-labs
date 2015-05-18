@@ -93,7 +93,7 @@
     \end{titlepage}
     \setcounter{page}{2}
 	\section*{Введение}
-	В данной работе определяются характеристики отражательного клистрона К-97Р: его рабочая частота и добротность резонатора. Все измерения проводятся в "горячем" режиме.
+	В данной работе определяются характеристики отражательного клистрона К-97Р: его рабочая частота и добротность резонатора. Все измерения проводятся в ``горячем'' режиме.
 	
 	\section{Теоретическая часть}
 	\subsection{Устройство отражательного клистрона и принцип его работы}
@@ -611,7 +611,7 @@
         \center
         \begin{tikzpicture}
             \tikzstyle{every node}=[font=\small]
-            \begin{axis}[ height=9cm, width=9cm, grid=major, xmin=60, xmax=200, ymin=8.18, ymax=8.28, xlabel={$|U_r|,~\text{В}$}, ylabel={$f,~\text{ГГц}$}]
+            \begin{axis}[ height=9cm, width=9cm, grid=major, xmin=60, xmax=200, ymin=8.15, ymax=8.30, xlabel={$|U_r|,~\text{В}$}, ylabel={$f,~\text{ГГц}$}]
 
             \addplot[name path=f1,white] coordinates {(61,8) (61,9)};
             \addplot[name path=f2,white] coordinates {(93,8) (93,9)};
@@ -620,9 +620,9 @@
             \addplot[name path=f5,white] coordinates {(182,8) (182,9)};
             \addplot[name path=f6,white] coordinates {(200,8) (200,9)};
 
-            \addplot[thick,color=blue,fill=blue,fill opacity=0.1] fill between[of=f1 and f2];
-            \addplot[thick,color=blue,fill=blue,fill opacity=0.1]fill between[of=f3 and f4];
-            \addplot[thick,color=blue,fill=blue,fill opacity=0.1]fill between[of=f5 and f6];
+            \addplot[thick,color=blue,fill=blue,fill opacity=0.2] fill between[of=f1 and f2];
+            \addplot[thick,color=blue,fill=blue,fill opacity=0.2]fill between[of=f3 and f4];
+            \addplot[thick,color=blue,fill=blue,fill opacity=0.2]fill between[of=f5 and f6];
 
             \addplot[color=black,smooth,very thick] coordinates {
                     (145, 8.27)
@@ -634,13 +634,13 @@
                     (110, 8.19)
                     };
             \addplot[only marks,mark=point,error bars/.cd,y dir=both,y explicit,x dir=both,x explicit] coordinates {
-                    (145, 8.27) +- (1, 0.01)
-                    (140, 8.24) +- (1, 0.01)
-                    (132, 8.23) +- (1, 0.01)
-                    (127, 8.22) +- (1, 0.01)
-                    (123, 8.21) +- (1, 0.01)
-                    (117, 8.20) +- (1, 0.01)
-                    (110, 8.19) +- (1, 0.01)
+                    (145, 8.27) +- (1, 0.005)
+                    (140, 8.24) +- (1, 0.005)
+                    (132, 8.23) +- (1, 0.005)
+                    (127, 8.22) +- (1, 0.005)
+                    (123, 8.21) +- (1, 0.005)
+                    (117, 8.20) +- (1, 0.005)
+                    (110, 8.19) +- (1, 0.005)
                     };
             \end{axis}
         \end{tikzpicture}
