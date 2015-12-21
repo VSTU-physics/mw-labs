@@ -254,8 +254,9 @@
             \draw (-2, 1.65) to (-2, 1.5) node[rground]{};
             \draw (-2.5, 1.65) to (mosfet.S);
 
-            \draw (4.5, 2) to (3,2) to (3,3.18) to [european resistor] (0,3.18) to (mosfet.D);
-            \draw (0,3.18) to (0,2);
+            \draw (4.5, 2.2) to (3,2.2) to (3,3.18) to [european resistor] (0,3.18) to (mosfet.D);
+            \draw (4.5, 1.8) to (4, 1.8) node[rground]{};
+            \draw (0,2) to[battery1,label=$U_{r0}$] (0,3.18);
 
         \end{tikzpicture}
         \caption{Функциональная схема установки для определения зон генерации клистрона.}
@@ -583,8 +584,8 @@
     
     \begin{figure}[!h]
     	\begin{center}
-    		\includegraphics[width=.6\textwidth]{images/6z5p1.png}
-    		\includegraphics[width=.3\textwidth]{images/6z5p2.png}
+    		\includegraphics[width=.6\textwidth]{images/6Z5P1.png}
+    		\includegraphics[width=.3\textwidth]{images/6Z5P2.png}
     	\end{center}
     	\caption{Анодные и сеточные характеристики лампы 6Ж5П}
     	\label{fig6z5p}
